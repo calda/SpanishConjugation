@@ -14,19 +14,17 @@
 		2EAF986E26975FB90066C44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EAF985926975FB90066C44D /* Assets.xcassets */; };
 		2EAF986F26975FB90066C44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EAF985926975FB90066C44D /* Assets.xcassets */; };
 		2EAF987C26975FE60066C44D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF987B26975FE60066C44D /* Word.swift */; };
-		2EAF9888269760530066C44D /* Conjugated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF9887269760530066C44D /* Conjugated.swift */; };
-		2EAF988B2697624F0066C44D /* Conjugated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF9887269760530066C44D /* Conjugated.swift */; };
 		2EAF988E269762520066C44D /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF987B26975FE60066C44D /* Word.swift */; };
-		2EAF9894269763630066C44D /* BaseConjugation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF9893269763630066C44D /* BaseConjugation.swift */; };
-		2EAF989A269763D10066C44D /* ConjugationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF9899269763D10066C44D /* ConjugationForm.swift */; };
-		2EAF989D269763D30066C44D /* ConjugationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF9899269763D10066C44D /* ConjugationForm.swift */; };
 		2EAF98A526976C5E0066C44D /* ConjugatedForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98A426976C5E0066C44D /* ConjugatedForms.swift */; };
 		2EAF98A826976CE70066C44D /* ConjugatedForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98A426976C5E0066C44D /* ConjugatedForms.swift */; };
-		2EAF98B126976E450066C44D /* ConjugationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98AB26976E3F0066C44D /* ConjugationEngine.swift */; };
-		2EAF98B426976E450066C44D /* ConjugationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98AB26976E3F0066C44D /* ConjugationEngine.swift */; };
-		2EAF98B7269771050066C44D /* BaseConjugation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF9893269763630066C44D /* BaseConjugation.swift */; };
 		2EAF98BF269890AD0066C44D /* WordSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98BE269890AD0066C44D /* WordSelector.swift */; };
 		2EAF98C0269890AD0066C44D /* WordSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98BE269890AD0066C44D /* WordSelector.swift */; };
+		2EAF98C6269B3E710066C44D /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98C5269B3E710066C44D /* DictionaryService.swift */; };
+		2EAF98C7269B3E710066C44D /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98C5269B3E710066C44D /* DictionaryService.swift */; };
+		2EAF98CC269B47090066C44D /* SpanishDictVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98CB269B47090066C44D /* SpanishDictVerb.swift */; };
+		2EAF98CD269B47090066C44D /* SpanishDictVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98CB269B47090066C44D /* SpanishDictVerb.swift */; };
+		2EAF98D3269B4ADA0066C44D /* Word+SpanishDictVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98D2269B4ADA0066C44D /* Word+SpanishDictVerb.swift */; };
+		2EAF98D4269B4ADA0066C44D /* Word+SpanishDictVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF98D2269B4ADA0066C44D /* Word+SpanishDictVerb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +37,11 @@
 		2EAF986826975FB90066C44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EAF986926975FB90066C44D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2EAF987B26975FE60066C44D /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		2EAF9887269760530066C44D /* Conjugated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conjugated.swift; sourceTree = "<group>"; };
-		2EAF9893269763630066C44D /* BaseConjugation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConjugation.swift; sourceTree = "<group>"; };
-		2EAF9899269763D10066C44D /* ConjugationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugationForm.swift; sourceTree = "<group>"; };
 		2EAF98A426976C5E0066C44D /* ConjugatedForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugatedForms.swift; sourceTree = "<group>"; };
-		2EAF98AB26976E3F0066C44D /* ConjugationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConjugationEngine.swift; sourceTree = "<group>"; };
 		2EAF98BE269890AD0066C44D /* WordSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSelector.swift; sourceTree = "<group>"; };
+		2EAF98C5269B3E710066C44D /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
+		2EAF98CB269B47090066C44D /* SpanishDictVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishDictVerb.swift; sourceTree = "<group>"; };
+		2EAF98D2269B4ADA0066C44D /* Word+SpanishDictVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Word+SpanishDictVerb.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,14 +113,21 @@
 		2EAF987A26975FD60066C44D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EAF98CA269B46F70066C44D /* SpanishDict */,
 				2EAF987B26975FE60066C44D /* Word.swift */,
-				2EAF9887269760530066C44D /* Conjugated.swift */,
-				2EAF9893269763630066C44D /* BaseConjugation.swift */,
-				2EAF9899269763D10066C44D /* ConjugationForm.swift */,
 				2EAF98A426976C5E0066C44D /* ConjugatedForms.swift */,
-				2EAF98AB26976E3F0066C44D /* ConjugationEngine.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2EAF98CA269B46F70066C44D /* SpanishDict */ = {
+			isa = PBXGroup;
+			children = (
+				2EAF98C5269B3E710066C44D /* DictionaryService.swift */,
+				2EAF98CB269B47090066C44D /* SpanishDictVerb.swift */,
+				2EAF98D2269B4ADA0066C44D /* Word+SpanishDictVerb.swift */,
+			);
+			path = SpanishDict;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,14 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EAF986C26975FB90066C44D /* ConjugationTable.swift in Sources */,
-				2EAF98B126976E450066C44D /* ConjugationEngine.swift in Sources */,
+				2EAF98D3269B4ADA0066C44D /* Word+SpanishDictVerb.swift in Sources */,
 				2EAF98BF269890AD0066C44D /* WordSelector.swift in Sources */,
-				2EAF9894269763630066C44D /* BaseConjugation.swift in Sources */,
-				2EAF9888269760530066C44D /* Conjugated.swift in Sources */,
+				2EAF98CC269B47090066C44D /* SpanishDictVerb.swift in Sources */,
 				2EAF98A526976C5E0066C44D /* ConjugatedForms.swift in Sources */,
 				2EAF986A26975FB90066C44D /* SpanishConjugationApp.swift in Sources */,
+				2EAF98C6269B3E710066C44D /* DictionaryService.swift in Sources */,
 				2EAF987C26975FE60066C44D /* Word.swift in Sources */,
-				2EAF989A269763D10066C44D /* ConjugationForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,13 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EAF989D269763D30066C44D /* ConjugationForm.swift in Sources */,
-				2EAF988B2697624F0066C44D /* Conjugated.swift in Sources */,
+				2EAF98D4269B4ADA0066C44D /* Word+SpanishDictVerb.swift in Sources */,
 				2EAF98C0269890AD0066C44D /* WordSelector.swift in Sources */,
 				2EAF988E269762520066C44D /* Word.swift in Sources */,
 				2EAF986D26975FB90066C44D /* ConjugationTable.swift in Sources */,
-				2EAF98B7269771050066C44D /* BaseConjugation.swift in Sources */,
-				2EAF98B426976E450066C44D /* ConjugationEngine.swift in Sources */,
+				2EAF98CD269B47090066C44D /* SpanishDictVerb.swift in Sources */,
+				2EAF98C7269B3E710066C44D /* DictionaryService.swift in Sources */,
 				2EAF986B26975FB90066C44D /* SpanishConjugationApp.swift in Sources */,
 				2EAF98A826976CE70066C44D /* ConjugatedForms.swift in Sources */,
 			);

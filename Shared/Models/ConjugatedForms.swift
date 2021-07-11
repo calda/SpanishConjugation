@@ -12,8 +12,7 @@ struct ConjugatedForm: Hashable {
 }
 
 /// Fully conjugated forms of word in a certain verb tense
-struct ConjugatedTense: Conjugated, Hashable {
-  
+struct ConjugatedTense: Hashable {
   let tense: String
   let firstPersonSingular: ConjugatedForm
   let firstPersonPlural: ConjugatedForm
@@ -22,24 +21,14 @@ struct ConjugatedTense: Conjugated, Hashable {
   let thirdPersonSingular: ConjugatedForm
   let thirdPersonPlural: ConjugatedForm
   
-  init(
-    infinitive: String,
-    applying baseConjugation: BaseConjugation,
-    using forms: ConjugationForms)
-  {
-    let conjugate = { (_ baseSuffix: String, _ form: ConjugationForm) -> ConjugatedForm in
-      ConjugationEngine.conjugate(
-        infinitive: infinitive,
-        applying: baseSuffix,
-        using: form)
-    }
-    
-    self.tense = baseConjugation.name
-    self.firstPersonSingular = conjugate(baseConjugation.firstPersonSingular, forms.firstPersonSingular)
-    self.firstPersonPlural = conjugate(baseConjugation.firstPersonPlural, forms.firstPersonPlural)
-    self.secondPersonSingular = conjugate(baseConjugation.secondPersonSingular, forms.secondPersonSingular)
-    self.secondPersonPlural = conjugate(baseConjugation.secondPersonPlural, forms.secondPersonPlural)
-    self.thirdPersonSingular = conjugate(baseConjugation.thirdPersonSingular, forms.thirdPersonSingular)
-    self.thirdPersonPlural = conjugate(baseConjugation.thirdPersonPlural, forms.thirdPersonPlural)
+  var allCases: [ConjugatedForm] {
+    [
+      firstPersonSingular,
+      firstPersonPlural,
+      secondPersonSingular,
+      secondPersonPlural,
+      thirdPersonSingular,
+      thirdPersonPlural,
+    ]
   }
 }

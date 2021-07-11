@@ -9,20 +9,53 @@ import SwiftUI
 
 struct WordSelector: View {
   
-  @State var word = Word.estar
+  @State var text: String = UserDefaults.standard.string(forKey: "input") ?? "estar"
+  @State var requestResult: Result<Word, Swift.Error>?
   
-  // TODO: This app should support entering any word in the search bar,
-  // and then look up the conjugations on SpanishDict
-  let selectableWords: [Word] = [.estar, .ser, .caminar, .estudiar]
+  let dictionaryService = DictionaryService()
   
   var body: some View {
-    Picker("", selection: $word) {
-      ForEach(selectableWords, id: \.self) { option in
-        Text(option.infinitive).tag(option)
-      }
-    }.frame(width: 150)
+    TextField("Word", text: $text, onCommit: {
+      UserDefaults.standard.setValue(text, forKey: "input")
+      loadConjugationTable()
+    })
+    .padding(.bottom, 8)
+    .onAppear {
+      loadConjugationTable()
+    }
     
-    ConjugationTable(word: $word)
+    switch requestResult {
+    case nil:
+      ProgressView()
+      
+    case .success(let word):
+      ConjugationTable(
+        // TODO: Is there a more ergonomic way to `map` a binding?
+        word: Binding(
+          get: {
+            switch requestResult {
+            case .success(let boundWord):
+              return boundWord
+            case nil, .failure:
+              // I assume this will never get called, right?
+              return word
+            }
+          },
+          set: {
+            // This will never get called because it doesn't really make sense,
+            // is there such a thing as a read-only binding?
+            self.requestResult = .success($0)
+          }))
+      
+    case .failure(let error):
+      Text(error.localizedDescription)
+    }
+  }
+  
+  func loadConjugationTable() {
+    dictionaryService.fetchConjugations(for: text) { result in
+      self.requestResult = result
+    }
   }
   
 }
