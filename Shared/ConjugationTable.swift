@@ -25,7 +25,7 @@ struct ConjugationTable: View {
     }
     
     LazyHGrid(
-      rows: .init(repeating: GridItem(.fixed(10)), count: 6),
+      rows: .init(repeating: GridItem(.fixed(12), alignment: .leading), count: 6),
       content: {
         
         let rowNames = [
@@ -41,15 +41,13 @@ struct ConjugationTable: View {
           Text(formName)
             .font(.subheadline)
             .foregroundColor(.secondary)
-            .frame(width: 70, height: 10, alignment: .trailing)
+            .frame(alignment: .trailing)
         }
         
         ForEach(word.allTenses, id: \.self) { tense in
           Text(tense.tense)
             .font(.headline)
-            .frame(alignment: .leading)
-            // Is it possible to have these columns dynamically? I hear this is hard
-            .frame(width: 100, height: 10, alignment: .leading)
+            .padding(.horizontal, 4)
           
           let formsToDisplay = [
             tense.firstPersonSingular,
@@ -68,16 +66,16 @@ struct ConjugationTable: View {
           
           ForEach(conjugatedForms, id: \.id) { (_, conjugatedForm) in
             Text(conjugatedForm.text)
-              .frame(width: 105, height: 10, alignment: .leading)
-              // TODO: Make this color less abrasive?
               .foregroundColor((conjugatedForm.isIrregular) ? .red : .primary)
+              .padding(.horizontal, 4)
+              // TODO: Use `.textSelection(.enabled)` when compiled with Xcode 13 SDK
           }
         }
       }).padding(
         EdgeInsets(
-          top: 8,
+          top: 10,
           leading: 16,
-          bottom: 8,
+          bottom: 10,
           trailing: 16))
   }
 }

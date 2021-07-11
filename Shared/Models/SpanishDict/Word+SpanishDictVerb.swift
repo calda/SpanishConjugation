@@ -16,8 +16,8 @@ extension Word {
       infinitive: spanishDictVerb.infinitive,
       translation: translation,
       present: .init(named: "Present", from: spanishDictVerb.paradigms.presentIndicative),
-      preterite: .init(named: "Past Preterite", from: spanishDictVerb.paradigms.preteritIndicative),
-      pastImperfect: .init(named: "Past Imperfect", from: spanishDictVerb.paradigms.imperfectIndicative),
+      preterite: .init(named: "Preterite", from: spanishDictVerb.paradigms.preteritIndicative),
+      pastImperfect: .init(named: "Imperfect", from: spanishDictVerb.paradigms.imperfectIndicative),
       future: .init(named: "Future", from: spanishDictVerb.paradigms.futureIndicative),
       conditional: .init(named: "Conditional", from: spanishDictVerb.paradigms.conditionalIndicative))
   }

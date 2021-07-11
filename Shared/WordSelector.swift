@@ -27,6 +27,7 @@ struct WordSelector: View {
     switch requestResult {
     case nil:
       ProgressView()
+        .frame(minHeight: 160)
       
     case .success(let word):
       ConjugationTable(
@@ -46,13 +47,16 @@ struct WordSelector: View {
             // is there such a thing as a read-only binding?
             self.requestResult = .success($0)
           }))
+        .fixedSize()
       
     case .failure(let error):
       Text(error.localizedDescription)
+        .frame(maxWidth: 350, minHeight: 160)
     }
   }
   
   func loadConjugationTable() {
+    requestResult = nil
     dictionaryService.fetchConjugations(for: text) { result in
       self.requestResult = result
     }
