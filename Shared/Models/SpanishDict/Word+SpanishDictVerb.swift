@@ -8,8 +8,12 @@
 extension Word {
   init(from spanishDictVerb: SpanishDictVerb) {
     var translation = spanishDictVerb.infinitiveTranslation
-    if !translation.starts(with: "to ") {
-      translation = "to \(translation)"
+    
+    if
+      let providedTranslation = translation,
+      !providedTranslation.starts(with: "to ")
+    {
+      translation = "to \(providedTranslation)"
     }
     
     self = Word(

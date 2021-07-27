@@ -11,7 +11,7 @@ struct SpanishDictResponse: Decodable {
 
 struct SpanishDictVerb: Decodable {
   let infinitive: String
-  let infinitiveTranslation: String
+  let infinitiveTranslation: String?
   let paradigms: SpanishDictTenses
 }
 
