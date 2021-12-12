@@ -23,7 +23,11 @@ extension Word {
       preterite: .init(named: "Preterite", from: spanishDictVerb.paradigms.preteritIndicative),
       pastImperfect: .init(named: "Imperfect", from: spanishDictVerb.paradigms.imperfectIndicative),
       future: .init(named: "Future", from: spanishDictVerb.paradigms.futureIndicative),
-      conditional: .init(named: "Conditional", from: spanishDictVerb.paradigms.conditionalIndicative))
+      conditional: .init(named: "Conditional", from: spanishDictVerb.paradigms.conditionalIndicative),
+      imperative: .init(named: "Imperative", from: spanishDictVerb.paradigms.imperative),
+      subjunctivePresent: .init(named: "Pres. Subj.", from: spanishDictVerb.paradigms.presentSubjunctive),
+      subjunctiveImperfect: .init(named: "Imperf. Subj.", from: spanishDictVerb.paradigms.imperfectSubjunctive),
+      subjunctiveFuture: .init(named: "Future Subj.", from: spanishDictVerb.paradigms.futureSubjunctive))
   }
 }
 
@@ -38,8 +42,12 @@ extension ConjugatedTense {
       firstPersonPlural: ConjugatedForm(from: words?.first(where: { $0.pronoun == .nosotros })),
       secondPersonSingular: ConjugatedForm(from: words?.first(where: { $0.pronoun == .tú })),
       secondPersonPlural: ConjugatedForm(from: words?.first(where: { $0.pronoun == .ellosEllasUstedes })),
-      thirdPersonSingular: ConjugatedForm(from: words?.first(where: { $0.pronoun == .élEllaUsted })),
-      thirdPersonPlural: ConjugatedForm(from: words?.first(where: { $0.pronoun == .ellosEllasUstedes })))
+      thirdPersonSingular: ConjugatedForm(
+        from: words?.first(where: { $0.pronoun == .élEllaUsted })
+          ?? words?.first(where: { $0.pronoun == .usted })),
+      thirdPersonPlural: ConjugatedForm(
+        from: words?.first(where: { $0.pronoun == .ellosEllasUstedes })
+          ?? words?.first(where: { $0.pronoun == .ustedes })))
   }
 }
 

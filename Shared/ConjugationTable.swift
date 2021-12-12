@@ -9,21 +9,10 @@ import SwiftUI
 
 struct ConjugationTable: View {
   
+  let tenses: [KeyPath<Word, ConjugatedTense>]
   @Binding var word: Word
   
-  var body: some View {
-    HStack(alignment: .firstTextBaseline, spacing: 8) {
-      Text(word.infinitive)
-        .font(.title2)
-        .bold()
-      
-      if let translation = word.translation {
-        Text(translation)
-          .font(.title3)
-          .foregroundColor(.secondary)
-      }
-    }
-    
+  var body: some View {    
     LazyHGrid(
       rows: .init(repeating: GridItem(.fixed(12), alignment: .leading), count: 6),
       content: {
@@ -44,7 +33,9 @@ struct ConjugationTable: View {
             .frame(alignment: .trailing)
         }
         
-        ForEach(word.allTenses, id: \.self) { tense in
+        ForEach(tenses, id: \.self) { tenseKeypath in
+          let tense = word[keyPath: tenseKeypath]
+          
           Text(tense.tense)
             .font(.headline)
             .padding(.horizontal, 4)

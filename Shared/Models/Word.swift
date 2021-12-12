@@ -25,7 +25,15 @@ struct Word: Hashable {
   /// The conditional tense -- "I would walk"
   let conditional: ConjugatedTense
   
-  var allTenses: [ConjugatedTense] {
-    [present, preterite, pastImperfect, future, conditional]
-  }
+  /// The affermative imperative tense -- "Walk."
+  let imperative: ConjugatedTense
+  
+  /// The present subjective tense -- "that I walk"
+  let subjunctivePresent: ConjugatedTense
+  
+  /// The imperfect subjective tense
+  let subjunctiveImperfect: ConjugatedTense
+  
+  /// The future subjective tense
+  let subjunctiveFuture: ConjugatedTense
 }
