@@ -16,30 +16,30 @@ struct SpanishDictVerb: Decodable {
 }
 
 struct SpanishDictTenses: Decodable {
-  let presentIndicative: [SpanishDictConjugatedWord]
-  let preteritIndicative: [SpanishDictConjugatedWord]
-  let imperfectIndicative: [SpanishDictConjugatedWord]
-  let conditionalIndicative: [SpanishDictConjugatedWord]
-  let futureIndicative: [SpanishDictConjugatedWord]
-  let presentSubjunctive: [SpanishDictConjugatedWord]
-  let imperfectSubjunctive: [SpanishDictConjugatedWord]
-  let imperfectSubjunctive2: [SpanishDictConjugatedWord]
-  let futureSubjunctive: [SpanishDictConjugatedWord]
-  let imperative: [SpanishDictConjugatedWord]
-  let negativeImperative: [SpanishDictConjugatedWord]
-  let presentContinuous: [SpanishDictConjugatedWord]
-  let preteritContinuous: [SpanishDictConjugatedWord]
-  let imperfectContinuous: [SpanishDictConjugatedWord]
-  let conditionalContinuous: [SpanishDictConjugatedWord]
-  let futureContinuous: [SpanishDictConjugatedWord]
-  let presentPerfect: [SpanishDictConjugatedWord]
-  let preteritPerfect: [SpanishDictConjugatedWord]
-  let pastPerfect: [SpanishDictConjugatedWord]
-  let conditionalPerfect: [SpanishDictConjugatedWord]
-  let futurePerfect: [SpanishDictConjugatedWord]
-  let presentPerfectSubjunctive: [SpanishDictConjugatedWord]
-  let pastPerfectSubjunctive: [SpanishDictConjugatedWord]
-  let futurePerfectSubjunctive: [SpanishDictConjugatedWord]
+  let presentIndicative: [SpanishDictConjugatedWord]?
+  let preteritIndicative: [SpanishDictConjugatedWord]?
+  let imperfectIndicative: [SpanishDictConjugatedWord]?
+  let conditionalIndicative: [SpanishDictConjugatedWord]?
+  let futureIndicative: [SpanishDictConjugatedWord]?
+  let presentSubjunctive: [SpanishDictConjugatedWord]?
+  let imperfectSubjunctive: [SpanishDictConjugatedWord]?
+  let imperfectSubjunctive2: [SpanishDictConjugatedWord]?
+  let futureSubjunctive: [SpanishDictConjugatedWord]?
+  let imperative: [SpanishDictConjugatedWord]?
+  let negativeImperative: [SpanishDictConjugatedWord]?
+  let presentContinuous: [SpanishDictConjugatedWord]?
+  let preteritContinuous: [SpanishDictConjugatedWord]?
+  let imperfectContinuous: [SpanishDictConjugatedWord]?
+  let conditionalContinuous: [SpanishDictConjugatedWord]?
+  let futureContinuous: [SpanishDictConjugatedWord]?
+  let presentPerfect: [SpanishDictConjugatedWord]?
+  let preteritPerfect: [SpanishDictConjugatedWord]?
+  let pastPerfect: [SpanishDictConjugatedWord]?
+  let conditionalPerfect: [SpanishDictConjugatedWord]?
+  let futurePerfect: [SpanishDictConjugatedWord]?
+  let presentPerfectSubjunctive: [SpanishDictConjugatedWord]?
+  let pastPerfectSubjunctive: [SpanishDictConjugatedWord]?
+  let futurePerfectSubjunctive: [SpanishDictConjugatedWord]?
 }
 
 struct SpanishDictConjugatedWord: Decodable {

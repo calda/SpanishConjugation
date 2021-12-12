@@ -30,16 +30,16 @@ extension Word {
 extension ConjugatedTense {
   fileprivate init(
     named name: String,
-    from words: [SpanishDictConjugatedWord])
+    from words: [SpanishDictConjugatedWord]?)
   {
     self = ConjugatedTense(
       tense: name,
-      firstPersonSingular: ConjugatedForm(from: words.first(where: { $0.pronoun == .yo })),
-      firstPersonPlural: ConjugatedForm(from: words.first(where: { $0.pronoun == .nosotros })),
-      secondPersonSingular: ConjugatedForm(from: words.first(where: { $0.pronoun == .tú })),
-      secondPersonPlural: ConjugatedForm(from: words.first(where: { $0.pronoun == .ellosEllasUstedes })),
-      thirdPersonSingular: ConjugatedForm(from: words.first(where: { $0.pronoun == .élEllaUsted })),
-      thirdPersonPlural: ConjugatedForm(from: words.first(where: { $0.pronoun == .ellosEllasUstedes })))
+      firstPersonSingular: ConjugatedForm(from: words?.first(where: { $0.pronoun == .yo })),
+      firstPersonPlural: ConjugatedForm(from: words?.first(where: { $0.pronoun == .nosotros })),
+      secondPersonSingular: ConjugatedForm(from: words?.first(where: { $0.pronoun == .tú })),
+      secondPersonPlural: ConjugatedForm(from: words?.first(where: { $0.pronoun == .ellosEllasUstedes })),
+      thirdPersonSingular: ConjugatedForm(from: words?.first(where: { $0.pronoun == .élEllaUsted })),
+      thirdPersonPlural: ConjugatedForm(from: words?.first(where: { $0.pronoun == .ellosEllasUstedes })))
   }
 }
 

@@ -50,7 +50,11 @@ struct WordSelector: View {
         .fixedSize()
       
     case .failure(let error):
-      Text(error.localizedDescription)
+      Text({ () -> String in
+        var string = ""
+        dump(error, to: &string)
+        return string
+      }())
         .frame(maxWidth: 350, minHeight: 160)
     }
   }
